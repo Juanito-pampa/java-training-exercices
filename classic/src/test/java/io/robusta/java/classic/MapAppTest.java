@@ -43,8 +43,8 @@ public class MapAppTest {
 
     @Test
     public void getKeys() throws Exception {
-        int[] keys={1,18, 5};
-        String[] values = {"John", "Jim", "Jane"};
+        int[] keys={1,18, 5, 12, 24};
+        String[] values = {"John", "Jim", "Jane", "Jean", "Jordan"};
 
         Map<Integer, String> map= app.buildMap(keys, values);
 
