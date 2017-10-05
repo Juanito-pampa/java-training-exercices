@@ -1,5 +1,6 @@
 package io.robusta.java.classic.pingouins;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,13 +10,22 @@ public class PenguinApp {
 
 
     Penguin createSimplePenguin(){
-        return null;
+        Penguin penguin = new Penguin("penguin");
+        return penguin;
     }
-
 
     List<Penguin> getPenguins(Penguin p1, Penguin p2, Penguin p3, Penguin p4, Penguin p5){
-        return null;
+        List<Penguin> list = new ArrayList<>();
+        if(p1!=null)
+        list.add(p1);
+        list.add(p2);
+        list.add(p3);
+        list.add(p4);
+        list.add(p5);
+        return list;
+
     }
+
 
     Penguin getPenguinByName(Penguin[] pingouins, String name){
         return null;

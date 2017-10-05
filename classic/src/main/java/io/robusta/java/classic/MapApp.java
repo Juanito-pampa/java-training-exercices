@@ -63,14 +63,21 @@ public class MapApp {
 
 	List<Integer> getKeysHavingValue(Map<Integer, String> map, String value) {
 		List<Integer> list = new ArrayList<>();
-		Set<Entry<Integer, String>> set = new HashSet<>();
-		set = map.entrySet();
-		// list ="";
+		 for (Map.Entry<Integer, String> entry: map.entrySet()){   
+			 if (entry.getValue() == value){
+	            	list.add(entry.getKey());
+	            }
+	        }
 		return list;
 	};
 
 	List<Integer> getKeysHavingValueAnyValue(Map<Integer, String> map, String... values) {
-		return null;
+		List<Integer> list = new ArrayList<>();
+		for (int i=0; i< values.length; i++){
+	            list.addAll(getKeysHavingValue(map, values[i]));
+	            }
+	        
+		return list;
 	}
 
 	// TODO: move up
